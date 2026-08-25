@@ -1,166 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>CARE Service Reminder</title>
-
-<style>
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    background: #000;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 40px 20px;
-}
-
-.logo {
-    color: #C9A227;
-    font-size: 48px;
-    font-weight: bold;
-    letter-spacing: 7px;
-    margin-bottom: 35px;
-}
-
-.card {
-    max-width: 430px;
-    margin: auto;
-    border: 1px solid #C9A227;
-    border-radius: 16px;
-    padding: 30px 24px;
-}
-
-.title {
-    color: #C9A227;
-    font-size: 23px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    margin-bottom: 28px;
-}
-
-.label {
-    color: #888;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-}
-
-.value {
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 7px;
-    margin-bottom: 22px;
-}
-
-.service-box {
-    text-align: left;
-    border-top: 1px solid #333;
-    padding-top: 20px;
-    margin-top: 5px;
-}
-
-.service-box h3 {
-    color: #C9A227;
-    font-size: 16px;
-    margin-bottom: 15px;
-}
-
-.service-item {
-    padding: 9px 0;
-    border-bottom: 1px solid #222;
-    color: #ddd;
-}
-
-.service-item:last-child {
-    border-bottom: none;
-}
-
-.button {
-    display: block;
-    margin-top: 28px;
-    padding: 14px;
-    background: #C9A227;
-    color: #000;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 8px;
-}
-
-.message {
-    margin-top: 25px;
-    font-size: 13px;
-    color: #aaa;
-    line-height: 1.6;
-}
-
-.footer {
-    margin-top: 30px;
-    color: #666;
-    font-size: 11px;
-}
-</style>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.6">
+  <style type="text/css">
+    body {background-color: #000000}
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 48.0px Arial; color: #bc921e; -webkit-text-stroke: #bc921e}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 23.0px Arial; color: #bc921e; -webkit-text-stroke: #bc921e}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Arial; color: #757575; -webkit-text-stroke: #757575}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 24.0px Arial; color: #ffffff; -webkit-text-stroke: #ffffff}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial; color: #d5d5d5; -webkit-text-stroke: #d5d5d5}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Arial; color: #ffffff; -webkit-text-stroke: #000000; background-color: #bc921e}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 13.0px Arial; color: #9a9a9a; -webkit-text-stroke: #9a9a9a}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 11.0px Arial; color: #535353; -webkit-text-stroke: #535353}
+    span.s1 {font-kerning: none}
+    span.s2 {font: 12.0px Arial; font-kerning: none; color: #ffffff; -webkit-text-stroke: 0px #000000}
+  </style>
 </head>
-
 <body>
-
-<div class="logo">CARE</div>
-
-<div class="card">
-
-    <div class="title">SERVICE REMINDER</div>
-    <div class="label">Vehicle</div>
-<div class="value" id="vehicle">Loading...</div>
-
-<div class="label">Next Service</div>
-<div class="value" id="nextService">Loading...</div>
-
-    <div class="service-box">
-
-        <h3>SERVICE DUE</h3>
-
-        <div class="service-item">Transmission Oil & Filter</div>
-        <div class="service-item">Coolant Replacement</div>
-        <div class="service-item">Brake Fluid</div>
-        <div class="service-item">Differential Oil</div>
-        <div class="service-item">4WD Oil</div>
-        <div class="service-item">A/C Cabin Filter</div>
-
-    </div>
-
-    <a class="button" href="https://wa.me/971XXXXXXXXX">
-        BOOK YOUR SERVICE
-    </a>
-
-    <div class="message">
-        Your vehicle is approaching its scheduled service.<br>
-        Contact CARE Auto Repair to arrange your appointment.
-    </div>
-
-</div>
-
-<div class="footer">
-    CARE Auto Repair
-</div>
+<p class="p1"><span class="s1"><b>CARE</b></span></p>
+<p class="p2"><span class="s1"><b>SERVICE REMINDER</b></span></p>
+<p class="p3"><span class="s1">VEHICLE</span></p>
+<p class="p4"><span class="s1"><b>Loading...</b></span></p>
+<p class="p3"><span class="s1">NEXT SERVICE</span></p>
+<p class="p4"><span class="s1"><b>Loading...</b></span></p>
+<h3 style="margin: 0.0px 0.0px 15.0px 0.0px; font: 16.0px Arial; color: #bc921e; -webkit-text-stroke: #bc921e"><span class="s1"><b>SERVICE DUE</b></span></h3>
+<p class="p6"><span class="s1">Transmission Oil &amp; Filter</span> <span class="service-km" id="transmissionKM">Loading...</span></p>
+<p class="p6"><span class="s1">Coolant Replacement</span> <span class="service-km" id="coolantKM">Loading...</span></p>
+<p class="p6"><span class="s1">Brake Fluid</span> <span class="service-km" id="brakeKM">Loading...</span></p>
+<p class="p6"><span class="s1">Differential Oil</span> <span class="service-km" id="differentialKM">Loading...</span></p>
+<p class="p6"><span class="s1">4WD Oil</span> <span class="service-km" id="fourwdKM">Loading...</span></p>
+<p class="p6"><span class="s1">A/C Cabin Filter</span> <span class="service-km" id="acKM">Loading...</span></p>
+<p class="p7"><span class="s1"><a href="https://wa.me/971XXXXXXXXX"><b>BOOK YOUR SERVICE</b><span class="s2"><b></b></span></a></span></p>
+<p class="p8"><span class="s1">Your vehicle is approaching its scheduled service.</span></p>
+<p class="p8"><span class="s1">Contact CARE Auto Repair to arrange your appointment.</span></p>
+<p class="p9"><span class="s1">CARE Auto Repair</span></p>
 
 <script>
 const params = new URLSearchParams(window.location.search);
 
-const vehicle = params.get("vehicle");
-const service = params.get("service");
+document.getElementById("transmissionKM").textContent =
+    params.get("transmission") ? "Due at " + params.get("transmission") + " KM" : "";
 
-if (vehicle) {
-    document.getElementById("vehicle").textContent = vehicle;
-}
+document.getElementById("coolantKM").textContent =
+    params.get("coolant") ? "Due at " + params.get("coolant") + " KM" : "";
 
-if (service) {
-    document.getElementById("nextService").textContent = service + " KM";
-}
+document.getElementById("brakeKM").textContent =
+    params.get("brake") ? "Due at " + params.get("brake") + " KM" : "";
+
+document.getElementById("differentialKM").textContent =
+    params.get("differential") ? "Due at " + params.get("differential") + " KM" : "";
+
+document.getElementById("fourwdKM").textContent =
+    params.get("fourwd") ? "Due at " + params.get("fourwd") + " KM" : "";
+
+document.getElementById("acKM").textContent =
+    params.get("ac") ? "Due at " + params.get("ac") + " KM" : "";
 </script>
 
 </body>
