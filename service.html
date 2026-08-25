@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CARE Service Reminder</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.logo {
+    color: #C9A227;
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 7px;
+    margin-bottom: 35px;
+}
+
+.card {
+    max-width: 430px;
+    margin: auto;
+    border: 1px solid #C9A227;
+    border-radius: 16px;
+    padding: 30px 24px;
+}
+
+.title {
+    color: #C9A227;
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 28px;
+}
+
+.label {
+    color: #888;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.value {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 7px;
+    margin-bottom: 22px;
+}
+
+.service-box {
+    text-align: left;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    margin-top: 5px;
+}
+
+.service-box h3 {
+    color: #C9A227;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.service-item {
+    padding: 9px 0;
+    border-bottom: 1px solid #222;
+    color: #ddd;
+}
+
+.service-item:last-child {
+    border-bottom: none;
+}
+
+.button {
+    display: block;
+    margin-top: 28px;
+    padding: 14px;
+    background: #C9A227;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.message {
+    margin-top: 25px;
+    font-size: 13px;
+    color: #aaa;
+    line-height: 1.6;
+}
+
+.footer {
+    margin-top: 30px;
+    color: #666;
+    font-size: 11px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="logo">CARE</div>
+
+<div class="card">
+
+    <div class="title">SERVICE REMINDER</div>
+<div class="label">Vehicle</div>
+<div class="value" id="vehicle">Loading...</div>
+
+<div class="label">Next Service</div>
+<div class="value" id="nextService">Loading...</div>    <div class="label">Vehicle</div>
+    <div class="value">BMW X5</div>
+
+    <div class="label">Next Service</div>
+    <div class="value">70,000 KM</div>
+
+    <div class="service-box">
+
+        <h3>SERVICE DUE</h3>
+
+        <div class="service-item">Transmission Oil & Filter</div>
+        <div class="service-item">Coolant Replacement</div>
+        <div class="service-item">Brake Fluid</div>
+        <div class="service-item">Differential Oil</div>
+        <div class="service-item">4WD Oil</div>
+        <div class="service-item">A/C Cabin Filter</div>
+
+    </div>
+
+    <a class="button" href="https://wa.me/971XXXXXXXXX">
+        BOOK YOUR SERVICE
+    </a>
+
+    <div class="message">
+        Your vehicle is approaching its scheduled service.<br>
+        Contact CARE Auto Repair to arrange your appointment.
+    </div>
+
+</div>
+
+<div class="footer">
+    CARE Auto Repair
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+
+const vehicle = params.get("vehicle");
+const service = params.get("service");
+
+if (vehicle) {
+    document.getElementById("vehicle").textContent = vehicle;
+}
+
+if (service) {
+    document.getElementById("nextService").textContent = service + " KM";
+}
+</script>
+
+</body>
+</html>
