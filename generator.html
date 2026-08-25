@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CARE QR Generator</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.logo {
+    color: #C9A227;
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 7px;
+    margin-bottom: 35px;
+}
+
+.card {
+    max-width: 430px;
+    margin: auto;
+    border: 1px solid #C9A227;
+    border-radius: 16px;
+    padding: 30px 24px;
+}
+
+h2 {
+    color: #C9A227;
+    margin-bottom: 25px;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    margin: 8px 0 15px;
+    border-radius: 8px;
+    border: 1px solid #555;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    background: #C9A227;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#qr {
+    margin-top: 30px;
+}
+
+#qr img {
+    width: 250px;
+    height: 250px;
+    background: white;
+    padding: 10px;
+}
+
+.url {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #888;
+    word-break: break-all;
+}
+</style>
+</head>
+
+<body>
+
+<div class="logo">CARE</div>
+
+<div class="card">
+
+    <h2>QR SERVICE GENERATOR</h2>
+
+    <input id="vehicle" type="text" placeholder="Vehicle e.g. BMW X5">
+
+    <input id="service" type="number" placeholder="Next Service KM e.g. 70000">
+
+    <button onclick="generateQR()">GENERATE QR CODE</button>
+
+    <div id="qr"></div>
+
+</div>
+
+<script>
+
+function generateQR() {
+
+    const vehicle = document.getElementById("vehicle").value.trim();
+    const service = document.getElementById("service").value.trim();
+
+    if (!vehicle || !service) {
+        alert("Please enter vehicle and service KM.");
+        return;
+    }
+
+    const page =
+        "https://tonihoueiss-ctrl.github.io/care-qr/service.html"
+        + "?vehicle=" + encodeURIComponent(vehicle)
+        + "&service=" + encodeURIComponent(service);
+
+    const qrURL =
+        "https://api.qrserver.com/v1/create-qr-code/?size=500x500&data="
+        + encodeURIComponent(page);
+
+    document.getElementById("qr").innerHTML =
+        '<img src="' + qrURL + '" alt="CARE QR Code">' +
+        '<div class="url">' + page + '</div>';
+}
+
+</script>
+
+</body>
+</html>
