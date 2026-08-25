@@ -94,6 +94,14 @@ button {
 
     <input id="service" type="number" placeholder="Next Service KM e.g. 70000">
 
+    <h3>SERVICE DUE</h3>
+    <input id="transmission" type="number" placeholder="Transmission Oil & Filter KM">
+    <input id="coolant" type="number" placeholder="Coolant Replacement KM">
+    <input id="brake" type="number" placeholder="Brake Fluid KM">
+    <input id="differential" type="number" placeholder="Differential Oil KM">
+    <input id="fourwd" type="number" placeholder="4WD Oil KM">
+    <input id="ac" type="number" placeholder="A/C Cabin Filter KM">
+
     <button onclick="generateQR()">GENERATE QR CODE</button>
 
     <div id="qr"></div>
@@ -115,7 +123,13 @@ function generateQR() {
     const page =
         "https://tonihoueiss-ctrl.github.io/care-qr/service.html"
         + "?vehicle=" + encodeURIComponent(vehicle)
-        + "&service=" + encodeURIComponent(service);
+        + "&service=" + encodeURIComponent(service)
+        + "&transmission=" + encodeURIComponent(document.getElementById("transmission").value.trim())
+        + "&coolant=" + encodeURIComponent(document.getElementById("coolant").value.trim())
+        + "&brake=" + encodeURIComponent(document.getElementById("brake").value.trim())
+        + "&differential=" + encodeURIComponent(document.getElementById("differential").value.trim())
+        + "&fourwd=" + encodeURIComponent(document.getElementById("fourwd").value.trim())
+        + "&ac=" + encodeURIComponent(document.getElementById("ac").value.trim());
 
     const qrURL =
         "https://api.qrserver.com/v1/create-qr-code/?size=500x500&data="

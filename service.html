@@ -124,12 +124,12 @@ body {
 
         <h3>SERVICE DUE</h3>
 
-        <div class="service-item">Transmission Oil & Filter</div>
-        <div class="service-item">Coolant Replacement</div>
-        <div class="service-item">Brake Fluid</div>
-        <div class="service-item">Differential Oil</div>
-        <div class="service-item">4WD Oil</div>
-        <div class="service-item">A/C Cabin Filter</div>
+        <div class="service-item" id="transmission">Transmission Oil & Filter</div>
+        <div class="service-item" id="coolant">Coolant Replacement</div>
+        <div class="service-item" id="brake">Brake Fluid</div>
+        <div class="service-item" id="differential">Differential Oil</div>
+        <div class="service-item" id="fourwd">4WD Oil</div>
+        <div class="service-item" id="ac">A/C Cabin Filter</div>
 
     </div>
 
@@ -161,6 +161,22 @@ if (vehicle) {
 if (service) {
     document.getElementById("nextService").textContent = service + " KM";
 }
+
+const serviceFields = [
+    ["transmission", "Transmission Oil & Filter"],
+    ["coolant", "Coolant Replacement"],
+    ["brake", "Brake Fluid"],
+    ["differential", "Differential Oil"],
+    ["fourwd", "4WD Oil"],
+    ["ac", "A/C Cabin Filter"]
+];
+
+serviceFields.forEach(([key, label]) => {
+    const km = params.get(key);
+    if (km) {
+        document.getElementById(key).textContent = label + " — Due at " + km + " KM";
+    }
+});
 </script>
 
 </body>
