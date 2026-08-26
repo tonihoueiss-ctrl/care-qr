@@ -137,6 +137,10 @@ body {
         BOOK YOUR SERVICE
     </a>
 
+    <a class="button" href="service-history.html">
+        SERVICE HISTORY
+    </a>
+
     <div class="message">
         Your vehicle is approaching its scheduled service.<br>
         Contact CARE Auto Repair to arrange your appointment.
@@ -153,6 +157,11 @@ const params = new URLSearchParams(window.location.search);
 
 const vehicle = params.get("vehicle");
 const service = params.get("service");
+const history = params.get("history");
+
+if (history) {
+    document.querySelector('a[href="service-history.html"]').href = "history/" + history;
+}
 
 if (vehicle) {
     document.getElementById("vehicle").textContent = vehicle;
